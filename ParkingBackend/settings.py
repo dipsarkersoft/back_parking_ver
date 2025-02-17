@@ -19,9 +19,8 @@ SECRET_KEY = 'django-insecure-x_5k-pk3il_x=&3oq&#h@99!n)i!w$1izra=3t-(ifeon4_s)i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
-
-
+ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app", ".now.sh"]
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 
@@ -109,7 +108,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ParkingBackend.wsgi.application'
+WSGI_APPLICATION = 'ParkingBackend.wsgi.app'
 
 
 
@@ -181,6 +180,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
