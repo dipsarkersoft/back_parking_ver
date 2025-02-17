@@ -27,6 +27,7 @@ PyRect
 PyScreeze
 python-dotenv
 pytweening
+pytz
 requests
 setuptools
 sniffio
