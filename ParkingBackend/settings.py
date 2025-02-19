@@ -122,20 +122,14 @@ WSGI_APPLICATION = 'ParkingBackend.wsgi.app'
 #     }
 # }
 
+import os
+import dj_database_url
 
 DATABASES = {
-    'default': {
-        'ENGINE':"django.db.backends.postgresql",
-        'NAME':"postgres",
-        'USER':os.getenv("db_user"),
-        'PASSWORD':os.getenv("db_password"),
-        'HOST':"aws-0-us-west-1.pooler.supabase.com",
-        'PORT':6543,
-        'OPTIONS': {
-            'sslmode': 'require'  
-        },
+    'default': dj_database_url.config(default=os.environ['DATABASE_URL'], engine='django_cockroachdb')
     }
-}
+
+
 
 
 
