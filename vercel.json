@@ -1,13 +1,11 @@
 {
-    "builds": [{
-      "src": "ParkingBackend/wsgi.py",
-      "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.13.0" }
-    }],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "ParkingBackend/wsgi.py"
-      }
-    ]
+  "builds": [
+    { "src": "manage.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "manage.py" }
+  ],
+  "env": {
+    "PYTHON_VERSION": "3.12"
+  }
 }
