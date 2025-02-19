@@ -124,9 +124,13 @@ WSGI_APPLICATION = 'ParkingBackend.wsgi.app'
 
 import os
 import dj_database_url
+import environ
+env = environ.Env()
+environ.Env.read_env()
+
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ['DATABASE_URL'], engine='django_cockroachdb')
+    'default': dj_database_url.config(default=env('DATABASE_URL'), engine='django_cockroachdb')
     }
 
 
