@@ -130,7 +130,7 @@ DATABASES = {
 #         'USER':os.getenv("db_user"),
 #         'PASSWORD':os.getenv("db_password"),
 #         'HOST':"aws-0-us-west-1.pooler.supabase.com",
-#         'PORT':6543,
+#         'PORT':5432,
 #         'OPTIONS': {
 #             'sslmode': 'require'  
 #         },
